@@ -180,7 +180,9 @@
     </div>
 
     <script>
-      const socket = io();
+      const socket = io({
+        transports: ["websocket"], // IMPORTANT
+      });
       const chatMessages = document.getElementById("chat-messages");
       const messageInput = document.getElementById("message-input");
       const sendButton = document.getElementById("send-button");
